@@ -1,0 +1,58 @@
+/* $size: 100px;
+
+body {
+  margin: 0;
+}
+
+img, div {
+   width: $size;
+   height: $size;
+} */
+
+.x {
+  width: 100px;
+  height: 100px;
+  animation: x 13s linear infinite alternate;
+  /* animation : rotate 10s infinite; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+.y {
+  /* render the image on the scale 100px x 34px */
+  animation: y 7s linear infinite alternate;
+  /* animation : rotate 10s infinite; */
+  /* -webkit-animation: mymove 1s infinite; Chrome, Safari, Opera */
+}
+
+.img-rotater {
+  width: 100px;
+  height: 100px;
+  animation: rotate 10s linear infinite alternate;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX( calc(100vw - 100px) );
+  }
+}
+
+@keyframes rotate {
+  from   {    transform: rotateZ(0deg);}
+  to { transform: rotateZ(360deg);}
+}
+
+@keyframes y {
+  100% {
+    transform: translateY( calc(100vh - 100px) );
+  }
+}
+
+
+/* @keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+} */

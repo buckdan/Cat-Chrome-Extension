@@ -1,0 +1,21 @@
+{
+    "name" : "Floating Cat",
+    "description" : "A cat that just float around your screen",
+    "version" : "0.1.0",
+    "manifest_version" : 3,
+    "permissions" : ["storage"],
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["test.js"],
+            "css" : ["test.css"]
+        }
+    ],
+    "options_page" : "options.html",
+    "icons": {
+        "16": "/images/Character_16.png",
+        "32": "/images/Character_32.png",
+        "48": "/images/Character_48.png",
+        "128": "/images/Character_128.png"
+    }
+}
