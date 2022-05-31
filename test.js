@@ -14,28 +14,50 @@ let skin = "Cat2"
 
 // setup()
 
-const body = document.querySelector('body');
+function AddLessCss(){
+    let link = document.createElement('link');
+    link.rel = 'stylesheet/less';
+    link.type = 'text/css';
+    link.href = 'style.less';
+    document.getElementsByTagName('head')[0].appendChild(link);
 
-const divx = document.createElement('div');
+    console.log("Less CSS added")
 
-divx.className = "x"
-body.append(divx)
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/less@4';
+    document.getElementsByTagName('head')[0].appendChild(script);
 
-const divy = document.createElement('div')
-divy.className = "y"
-divx.append(divy)
-
-const img = document.createElement('img');
-img.className = "img-rotater"
-if(skin == "Default"){
-    img.src = "https://drive.google.com/uc?export=view&id=1enJaagoq08mvGGsJwQ-UXEQbzrsY2VxL"
+    console.log("Less JS added")
 }
 
-if(skin == "Cat2"){
-    img.src = "https://drive.google.com/uc?export=view&id=1B9rohDF_J5PPwfv3xuwy-fo5LYfTsl-m"
+function createCat(){
+    
+    const body = document.querySelector('body');
+    
+    const divx = document.createElement('div');
+    
+    divx.className = "x"
+    body.append(divx)
+    
+    const divy = document.createElement('div')
+    divy.className = "y"
+    divx.append(divy)
+    
+    const img = document.createElement('img');
+    img.className = "img-rotater"
+    if(skin == "Default"){
+        img.src = "https://drive.google.com/uc?export=view&id=1enJaagoq08mvGGsJwQ-UXEQbzrsY2VxL"
+    }
+    
+    if(skin == "Cat2"){
+        img.src = "https://drive.google.com/uc?export=view&id=1B9rohDF_J5PPwfv3xuwy-fo5LYfTsl-m"
+    }
+    img.alt = "My Character :))"
+    
+    divy.append(img)
 }
-img.alt = "My Character :))"
 
-divy.append(img)
+//AddLessCss()
+createCat()
 
 console.log("Finish loading test.js")

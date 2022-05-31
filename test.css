@@ -1,13 +1,4 @@
-/* $size: 100px;
-
-body {
-  margin: 0;
-}
-
-img, div {
-   width: $size;
-   height: $size;
-} */
+/* @randomNum: `Math.round(Math.random() * 100)`; */
 
 .x {
   width: 100px;
@@ -36,6 +27,7 @@ img, div {
 @keyframes x {
   100% {
     transform: translateX( calc(100vw - 100px) );
+    /* transform: translateX( calc(100vw - ~'@{randomNum}px') ); */
   }
 }
 
@@ -47,12 +39,6 @@ img, div {
 @keyframes y {
   100% {
     transform: translateY( calc(100vh - 100px) );
+    /* transform: translateY( calc(100vh - ~'@{randomNum}px') ); */
   }
 }
-
-
-/* @keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-} */

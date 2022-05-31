@@ -3,7 +3,7 @@
     "description" : "A cat that just float around your screen",
     "version" : "0.1.0",
     "manifest_version" : 3,
-    "permissions" : ["storage"],
+    "permissions" : ["storage", "activeTab", "scripting"],
     "content_scripts" : [
         {
             "matches" : ["<all_urls>"],
@@ -17,5 +17,8 @@
         "32": "/images/Character_32.png",
         "48": "/images/Character_48.png",
         "128": "/images/Character_128.png"
+    },
+    "action" : {
+        "default_popup" : "popup.html"
     }
 }
